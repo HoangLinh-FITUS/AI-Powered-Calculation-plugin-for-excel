@@ -40,14 +40,14 @@ Một add-on được phát triển bằng Google Apps Script cho phép người
 - Chọn all rows $\rightarrow$ run
 
 <div align='center'>
-<img src="https://i.imgur.com/Usd5c26.png" alt='all row'>
+<img src="https://i.imgur.com/peFOLNB.png" alt='all row'>
 </div>
 
 **Trường hợp 2:**
 - Chọn $1$ rows $\rightarrow$ run
 
 <div align='center'>
-<img src='https://i.imgur.com/WiBbP4h.png' alt= 'rows'>
+<img src='https://i.imgur.com/EBFkAXg.png' alt= 'rows'>
 </div>
 
 **Trường hợp 3:**
@@ -55,7 +55,7 @@ Một add-on được phát triển bằng Google Apps Script cho phép người
 - from $1$ rows $\rightarrow$ run
 
 <div align='center'>
-<img src='https://i.imgur.com/vhF7O3V.png' alt= 'fixed'>
+<img src='https://i.imgur.com/eMvctEk.png' alt= 'fixed'>
 </div>
 
 ### GPT Function 

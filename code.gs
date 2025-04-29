@@ -8,7 +8,7 @@ function get_const_models_llm() {
 
 function gemini_20flash(prompt, temperature = 1, model = 'gemini-2.0-flash') {
   const GEMINI_API = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${GEMINI_API_KEY}`
-
+  
   prompt = prompt + '. Please format the following product names into a clean, visually appealing markdown bullet list. Each product name should appear on a separate line, starting with "- ". Just give answer, no extra comments, explanations, or introduction.'
 
   const response = UrlFetchApp.fetch(GEMINI_API, {
@@ -83,7 +83,7 @@ function prompt_to_run_each_row(headers, row_start, numOf, prompt, put_res) {
       for (var [key, value] of Object.entries(row_headers)) {
           let placeholder = `{{${value}}}`;
           if (real_prompt.includes(placeholder)) {
-            let value_row = sheet.getRange(row, id_col[value]).getValue();
+            let value_row = "{{" + sheet.getRange(row, id_col[value]).getValue() + "}}";
             real_prompt = real_prompt.replaceAll(placeholder, value_row); 
           }
       }
@@ -111,9 +111,7 @@ Desired format: {{${Format}}}
 }
 
 function test() {
-// console.log(getLastRow())
-console.log(GPT_SUMMARIZE("Noi dung can duoc tom tat rat tom ta, ....", "list", 0))
-  //prompt_to_run_each_row(1, 2, 3, "You are an expert in the digital marketing. You are responsible for generating production name from {{Description}}.", 'C')
+  prompt_to_run_each_row(1, 2, 3, "You are an expert in the digital marketing. You are responsible for generating production name from {{Description}}.", 'C')
 }
 
 
